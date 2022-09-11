@@ -8,16 +8,19 @@ int main(void)
 {
 	int a, b;
 
-	for (a = 0; a <= 9; a++)
+	for (a = 0; a < 9; a++)
 	{
-		for (b = 0; b <= 9; b++)
+		for (b = a + 1; b < 10; b++)
 		{
 			if (a != b)
 			{
 				putchar(a + '0');
 				putchar(b + '0');
-				putchar(',');
-				putchar(' ');
+				if (a + b < 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}

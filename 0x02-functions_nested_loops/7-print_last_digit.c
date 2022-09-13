@@ -7,7 +7,7 @@
  */
 int print_last_digit(int n)
 {
-	if (n < 0 || n == 2147483647-1)
+	if (n < 0 || n == -2147483647 - 1)
 	{
 		int a = -n;
 		int x = a % 10;

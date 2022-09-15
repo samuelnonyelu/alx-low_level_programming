@@ -2,6 +2,7 @@
 /**
  * print_diagonal - print diagonal lines than end in \
  * @n: number of times '\' should be printed
+ * @n: same as above
  *
  * Return: 0 of success
  */

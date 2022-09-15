@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * print_diagonal - print diagonal lines than end in \
- * @n: number of times \ should be printed
+ * @n: number of times '\' should be printed
  *
  * Return: 0 of success
  */
 void print_diagonal(int n)
 {
 	int i, j;
+
 	if (n > 0)
 	{
 		for (i = 1; i <= n; i++)
@@ -20,7 +21,7 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	else if (n <= 0) 
+	else if (n <= 0)
 	{
 		_putchar('\n');
 	}

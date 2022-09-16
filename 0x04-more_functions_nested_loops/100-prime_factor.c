@@ -7,7 +7,7 @@
 int main(void)
 {
 	int maxPrime, oddPrime;
-	long int num = 612852475144;
+	long int num = 612852475143;
 
 	maxPrime = 0;
 	oddPrime = 3;

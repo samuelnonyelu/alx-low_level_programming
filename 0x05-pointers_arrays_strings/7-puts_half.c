@@ -1,21 +1,5 @@
 #include "main.h"
 /**
- * stlen - works like strlen
- * @p: string
- *
- * Return: c
- */
-int stlen(char *p)
-{
-	int c = 0;
-
-	while (*(p + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
-}
-/**
  * puts_half - prints 2nd half of a string
  * @str: string
  *
@@ -24,20 +8,28 @@ int stlen(char *p)
 void puts_half(char *str)
 {
 	int i;
+	int count = 0;
 
-	if (stlen(str) % 2 != 0)
+	while (count >= 0)
 	{
-		for (i = ((stlen(str) - 1) / 2); i < (stlen(str)); i++)
+		if (str[count] == '\0')
 		{
-			_putchar(str[i]);
+			break;
 		}
+		count++;
+	}
+	if (count % 2 == 1)
+	{
+		i = count / 2;
 	}
 	else
 	{
-		for (i = stlen(str)/2; i < stlen(str); i++)
-		{
-			_putchar(str[i]);
-		}
+		i = (count - 1) / 2;
 	}
+	for (i++; i < count; i++)
+	{
+		_putchar(str[i]);
+	}
+
 	_putchar('\n');
 }

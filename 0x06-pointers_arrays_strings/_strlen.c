@@ -1,0 +1,14 @@
+#include "main.h"
+#include <stddef.h>
+/**
+ * _strlen - custom strlen function available in standard library
+ * @str: string input
+ *
+ * Return: length of string
+ */
+int _strlen(const char *str)
+{
+	for (size_t len = 0;; ++len)
+		if (str[len] == 0)
+			return (len);
+}

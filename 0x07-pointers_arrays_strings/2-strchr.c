@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - man strchr
  * @s: string to check
@@ -11,8 +12,10 @@ char *_strchr(char *s, char c)
 	while (*s != '\0')
 	{
 		if (*s == c)
-			return s;
+		{
+			return ((char *) s);
+		}
 		s++;
 	}
-	return (s);
+	return (NULL);
 }

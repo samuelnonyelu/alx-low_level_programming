@@ -1,6 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
  * main - check code
  * @argc: argument count as int which counts and stores no of command line arg
@@ -10,22 +11,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, j;
 	int result = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		int conv_num;
-		char *p;
-
-		conv_num = strtol(argv[i], &p, 10);
-
-		if (p == argv[i])
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		result += conv_num;
+		result += atoi(argv[i]);
 	}
 	printf("%d\n", result);
 	return (0);

@@ -29,6 +29,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (newstring == NULL)
 	{
+		free(newstring);
 		return (NULL);
 	}
 
@@ -36,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		newstring[i] = s1[i];
 
 	for (i = 0; i < s2_len; i++)
-		newstring[s1_len + 1] = s2[i];
+		newstring[s1_len + i] = s2[i];
 
 	newstring[size - 1] = '\0';
 

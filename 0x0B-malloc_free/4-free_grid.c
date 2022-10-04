@@ -1,15 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * free_grid - frees a 2 dimensional grid.
- * @grid: multidimensional array of integers.
- * @height: height of the grid.
+ * free_grid - free 2d grid
+ * @grid: array of int to be freed from slavery
+ * @height: height of grid
  *
- * Return: no return
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
-	if (grid != NULL && height != 0)
+	if (grid != NULL & height != 0)
 	{
 		for (; height >= 0; height--)
 		{

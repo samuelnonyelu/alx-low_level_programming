@@ -56,7 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         {
             arrstr[i] = s1[i];
         }
-        for(i = 0; i < l2 - n + 2; i++)
+        for(i = 0; i < n && s2[i] != '\0'; i++)
         {
             arrstr[l1 + i] = s2[i];
         }
